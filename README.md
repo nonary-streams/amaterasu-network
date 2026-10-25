@@ -1,24 +1,17 @@
-# Amaterasu network module source proof
+# Amaterasu network module source (publication candidate)
 
-Extracted from committed Amaterasu `a6b0db9e36a1a59328ab4b4785b27b210f8182b7`.
-This local-only source workspace owns NVHTTP, RTSP, encrypted control/media
-transports and their UPnP helper. The existing service IDs, native exports,
-protocol logic and module manifests are unchanged. The pinned SDK foundation
-is `fe3004d5889df3eb0ce6f68c74fbef0f33c76e94`; protocol/policy source is
-`840e902bc4bfb7a416b4c347f4ab18af155ae0ff` and itself pins that same
-foundation. No public remote exists.
+This workspace holds NVHTTP, RTSP, encrypted control/media transports and
+UPnP. Its proposed portable Cargo pins reference exact commits of
+`nonary-streams/amaterasu-sdk` and `nonary-streams/amaterasu-protocol`. The
+committed lockfile preserves the vetted `yoke-derive 0.8.3` resolution because
+a fresh offline solve cannot select that yanked version; a dependency update
+needs separate review. `cargo test --workspace --locked --offline --no-run`
+compiled all test binaries locally without binding sockets.
 
-Only test fixture paths changed. RTSP tests carry the exact checked-in Moonlight
-SDP from `crates/gamestream/src/sdp/fixtures/moonlight-h264.sdp`. NVHTTP TLS
-tests carry exact synthetic public fixtures from
-`modules/pairing/tests/fixtures/host-cert.pem`, `client-cert.pem`, and
-`client-key.pem`; their origin README says the private test key must never be
-deployed. Runtime source has no new secret or path access. These small test
-copies remove monorepo-relative `include_*` paths; all other source bytes
-match the source revision. The SDP is marked binary in `.gitattributes` to
-retain CRLF bytes.
-
-`file://` dependency URLs are local proofs, not portable release pins. A stable
-approved source location and regenerated lockfile are needed before publication.
-Source extraction does not sign, load, bind, or activate any network service.
-The host's verified package and caller grants remain authoritative.
+RTSP tests include a copied synthetic Moonlight SDP. NVHTTP TLS tests include
+public synthetic certificates and a **test-only private key** copied from the
+committed pairing fixtures; it must never be deployed or mistaken for a user
+credential. See `modules/nvhttp/tests/fixtures/README.pairing-source.md`.
+The host's signed package and caller grants still control every service.
+Source publication creates no listener or runtime permission. The Amaterasu
+source license remains pending.

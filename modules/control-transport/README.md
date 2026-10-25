@@ -85,7 +85,7 @@ payload; the encrypted envelope is at most 65,539 bytes.
 The sender selects reliable, sequenced-unreliable or unsequenced delivery. ENet
 negotiates up to 48 channels and MTU 1392 by default. Fragmentation, acknowledgement,
 retransmission and window bounds belong to the shared
-[ENet peer engine](../../crates/gamestream/src/enet/peer/README.md). Its unsupported
+ENet peer engine in the separately pinned `amaterasu-protocol` repository. Its unsupported
 compression, checksums, migration and adaptive congestion shaping are not silently
 enabled by this provider.
 
@@ -126,14 +126,9 @@ peer failure; authenticated deadlines still bound their resource lifetime.
 
 Tests exercise authority, cancellation, poisoned-lock teardown, key/idempotency
 history, packet rejection, native sink retry and queue/deadline bounds. The signed
-integration uses the original pinned C ENet client and independent Python GCM for
-exact 0-, 2,000- and 65,511-byte round trips. See
-[oracle setup](../../scripts/control_enet_oracle/README.md), then run:
-
-```sh
-AMATERASU_ENET_CLIENT_ORACLE=/private/tmp/amaterasu-enet-client-oracle \
-  python3 scripts/test_control_transport.py
-```
+integration used the original pinned C ENet client and independent Python GCM for
+exact 0-, 2,000- and 65,511-byte round trips. That historical oracle lives in
+the host integration source; it is not included in this standalone repository.
 
 This verifies an encrypted control component, not a complete Moonlight session.
 Authenticated launch/RTSP orchestration, actual input dispatch, IDR/feedback

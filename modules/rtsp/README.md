@@ -109,7 +109,8 @@ One encrypted RTSP request is accepted per TCP connection, followed by an encryp
 response and EOF. Crypto counters and replay windows live on the ticket across
 connections. There is no plaintext fallback. See the
 [transport contract](src/transport/README.md) for bounds and disconnect semantics,
-and the [negotiation contract](../../crates/gamestream/src/rtsp/negotiation/README.md)
+and the negotiation contract in the separately pinned `amaterasu-protocol`
+repository (`crates/gamestream/src/rtsp/negotiation/README.md`)
 for protocol state and compatibility limits.
 
 ## Qualification and remaining integration

@@ -203,7 +203,8 @@ and prohibit unwinding across the native ABI.
 The shared GameStream crypto implementation uses vetted ring AES-128-GCM for
 the explicitly supported Sunshine host-to-client video profile and RustCrypto
 AES-128-CBC/PKCS7 for legacy audio. It owns cipher state; the transport adds no
-cipher implementation. See [crypto contract](../../crates/gamestream/src/crypto/README.md).
+cipher implementation. See the crypto contract in the separately pinned
+`amaterasu-protocol` repository (`crates/gamestream/src/crypto/README.md`).
 
 A key may be shared by video and audio within its one launch session. Private,
 bounded history rejects reusing it in another stream during this module

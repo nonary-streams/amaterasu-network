@@ -8,13 +8,13 @@ rust-version = "1.89"
 version = "0.1.0"
 
 [workspace.dependencies]
-amaterasu-contracts = { git = "file:///tmp/amaterasu-modular-repos/foundation", rev = "fe3004d5889df3eb0ce6f68c74fbef0f33c76e94" }
-amaterasu-module-sdk = { git = "file:///tmp/amaterasu-modular-repos/foundation", rev = "fe3004d5889df3eb0ce6f68c74fbef0f33c76e94" }
-amaterasu-media = { git = "file:///tmp/amaterasu-modular-repos/foundation", rev = "fe3004d5889df3eb0ce6f68c74fbef0f33c76e94" }
-amaterasu-gamestream = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
-amaterasu-input-policy = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
-amaterasu-network-policy = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
-amaterasu-identity = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
+amaterasu-contracts = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "24819cf7bbf0fc538b91177dd95cac7e599a9229" }
+amaterasu-module-sdk = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "24819cf7bbf0fc538b91177dd95cac7e599a9229" }
+amaterasu-media = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "24819cf7bbf0fc538b91177dd95cac7e599a9229" }
+amaterasu-gamestream = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
+amaterasu-input-policy = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
+amaterasu-network-policy = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
+amaterasu-identity = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"
