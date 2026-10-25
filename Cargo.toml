@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = ["modules/nvhttp", "modules/rtsp", "modules/control-transport", "modules/media-transport", "modules/upnp"]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.89"
+version = "0.1.0"
+
+[workspace.dependencies]
+amaterasu-contracts = { git = "file:///tmp/amaterasu-modular-repos/foundation", rev = "fe3004d5889df3eb0ce6f68c74fbef0f33c76e94" }
+amaterasu-module-sdk = { git = "file:///tmp/amaterasu-modular-repos/foundation", rev = "fe3004d5889df3eb0ce6f68c74fbef0f33c76e94" }
+amaterasu-media = { git = "file:///tmp/amaterasu-modular-repos/foundation", rev = "fe3004d5889df3eb0ce6f68c74fbef0f33c76e94" }
+amaterasu-gamestream = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
+amaterasu-input-policy = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
+amaterasu-network-policy = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
+amaterasu-identity = { git = "file:///tmp/amaterasu-modular-repos/protocol", rev = "840e902bc4bfb7a416b4c347f4ab18af155ae0ff" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+getrandom = "0.3"
+httparse = "1"
+
+[workspace.lints.rust]
+unsafe_op_in_unsafe_fn = "deny"

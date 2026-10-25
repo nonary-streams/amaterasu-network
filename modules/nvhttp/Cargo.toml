@@ -1,0 +1,30 @@
+[package]
+name = "amaterasu-nvhttp"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+amaterasu-contracts.workspace = true
+amaterasu-network-policy.workspace = true
+amaterasu-input-policy.workspace = true
+amaterasu-module-sdk.workspace = true
+amaterasu-identity.workspace = true
+amaterasu-gamestream.workspace = true
+amaterasu-upnp = { path = "../upnp" }
+amaterasu-media.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+getrandom.workspace = true
+httparse.workspace = true
+pem-rfc7468 = { version = "0.7", features = ["alloc"] }
+x509-cert = "0.2.5"
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+socket2 = "0.6.5"
+
+[lints]
+workspace = true

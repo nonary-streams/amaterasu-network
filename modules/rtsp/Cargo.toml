@@ -1,0 +1,23 @@
+[package]
+name = "amaterasu-rtsp"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+amaterasu-contracts.workspace = true
+amaterasu-input-policy.workspace = true
+amaterasu-module-sdk.workspace = true
+amaterasu-gamestream.workspace = true
+amaterasu-media.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+getrandom.workspace = true
+sha2.workspace = true
+socket2 = "0.6.5"
+
+[lints]
+workspace = true

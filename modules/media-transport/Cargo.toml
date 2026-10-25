@@ -1,0 +1,26 @@
+[package]
+name = "amaterasu-media-transport"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+amaterasu-module-sdk.workspace = true
+amaterasu-media.workspace = true
+amaterasu-gamestream.workspace = true
+amaterasu-network-policy.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+getrandom = "0.3"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_Networking_WinSock"] }
+
+[lints]
+workspace = true
