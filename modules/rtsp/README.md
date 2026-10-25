@@ -142,7 +142,8 @@ stable encoder identity or the exact `"auto"`/`"software"` backend selectors.
 The selection passes unchanged to video, which resolves non-identity selectors
 once before capture allocation. Missing software support fails explicitly; fixture
 control success does not qualify real capture, encode, or client playback. See
-[video selection policy](../video/README.md) for bounds and automatic-selection
+video selection policy in the separately pinned `amaterasu-encode-video`
+repository (`modules/video/README.md`) for bounds and automatic-selection
 limits.
 
 Software tuning remains exact through the launch snapshot: nullable `sw_preset`

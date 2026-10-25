@@ -788,7 +788,8 @@ stable encoder identity or the exact `"auto"`/`"software"` backend selectors.
 The selection passes unchanged to video, which resolves non-identity selectors
 once before capture allocation. Missing software support fails explicitly; fixture
 control success does not qualify real capture, encode, or client playback. See
-[video selection policy](../video/README.md) for bounds and automatic-selection
+video selection policy in the separately pinned `amaterasu-encode-video`
+repository (`modules/video/README.md`) for bounds and automatic-selection
 limits.
 
 ## Software encoder policy
@@ -824,7 +825,8 @@ Signed host, application and client editors distinguish inheritance from an
 explicit empty string. Host settings expose configured and effective tuning;
 `media/encoders` reports the genuine current runtime availability. Disabled
 software builds and missing headers/libraries cannot select a software encoder.
-See [encoder distribution requirements](../encode/README.md#software-x264-selection-and-distribution).
+See encoder distribution requirements in the `amaterasu-encode-video`
+repository (`modules/encode/README.md`, software x264 section).
 Auto prefers registered hardware then available x264, with no hardware probing
 or fallback after failed hardware Open. Unsupported reference vendor labels are
 rejected. Windows software packaging, hardware qualification and live playback
