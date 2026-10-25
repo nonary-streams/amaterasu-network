@@ -13,5 +13,5 @@ public synthetic certificates and a **test-only private key** copied from the
 committed pairing fixtures; it must never be deployed or mistaken for a user
 credential. See `modules/nvhttp/tests/fixtures/README.pairing-source.md`.
 The host's signed package and caller grants still control every service.
-Source publication creates no listener or runtime permission. The Amaterasu
-source license remains pending.
+Source publication creates no listener or runtime permission. Project-authored
+source is MIT licensed.

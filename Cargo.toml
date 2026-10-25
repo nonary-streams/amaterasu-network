@@ -3,18 +3,19 @@ resolver = "2"
 members = ["modules/nvhttp", "modules/rtsp", "modules/control-transport", "modules/media-transport", "modules/upnp"]
 
 [workspace.package]
+license = "MIT"
 edition = "2024"
 rust-version = "1.89"
 version = "0.1.0"
 
 [workspace.dependencies]
-amaterasu-contracts = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "24819cf7bbf0fc538b91177dd95cac7e599a9229" }
-amaterasu-module-sdk = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "24819cf7bbf0fc538b91177dd95cac7e599a9229" }
-amaterasu-media = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "24819cf7bbf0fc538b91177dd95cac7e599a9229" }
-amaterasu-gamestream = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
-amaterasu-input-policy = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
-amaterasu-network-policy = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
-amaterasu-identity = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "fa18f697916fb19d82cf672a0b0551f222b25b86" }
+amaterasu-contracts = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "37e007d102be65041e9817c63495e308bfc0b369" }
+amaterasu-module-sdk = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "37e007d102be65041e9817c63495e308bfc0b369" }
+amaterasu-media = { git = "https://github.com/nonary-streams/amaterasu-sdk.git", rev = "37e007d102be65041e9817c63495e308bfc0b369" }
+amaterasu-gamestream = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "83796e4d5f67550a0cb4d515a938dd9895fc36f1" }
+amaterasu-input-policy = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "83796e4d5f67550a0cb4d515a938dd9895fc36f1" }
+amaterasu-network-policy = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "83796e4d5f67550a0cb4d515a938dd9895fc36f1" }
+amaterasu-identity = { git = "https://github.com/nonary-streams/amaterasu-protocol.git", rev = "83796e4d5f67550a0cb4d515a938dd9895fc36f1" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"
