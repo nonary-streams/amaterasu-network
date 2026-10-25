@@ -1,7 +1,7 @@
-# Amaterasu network module source (publication candidate)
+# Amaterasu network module source
 
 This workspace holds NVHTTP, RTSP, encrypted control/media transports and
-UPnP. Its proposed portable Cargo pins reference exact commits of
+UPnP. Its portable Cargo pins reference exact commits of
 `nonary-streams/amaterasu-sdk` and `nonary-streams/amaterasu-protocol`. The
 committed lockfile preserves the vetted `yoke-derive 0.8.3` resolution because
 a fresh offline solve cannot select that yanked version; a dependency update
